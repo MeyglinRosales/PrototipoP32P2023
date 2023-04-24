@@ -6,7 +6,6 @@
 package Seguridad.Vista;
 
 
-
 import Seguridad.Modelo.daoBitacora;
 import Seguridad.Controlador.clsUsuarioConectado;
 import java.util.List;
