@@ -21,7 +21,7 @@ public class MdiSeguridad extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         this.setExtendedState(MdiSeguridad.MAXIMIZED_BOTH);
-        this.setTitle("Ejemplo Capas");
+        this.setTitle("MEYGLIN DEL ROSARIO ROSALES OCHOA --- 9959 - 21 - 4490");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
@@ -50,6 +50,7 @@ public class MdiSeguridad extends javax.swing.JFrame {
         mantenimientoModulos = new javax.swing.JCheckBoxMenuItem();
         mantenimientoPerfiles = new javax.swing.JCheckBoxMenuItem();
         mantenimientoTipoUsuarios = new javax.swing.JCheckBoxMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
         mnuProcesos = new javax.swing.JMenu();
         jMenuItemPerfilUsuario = new javax.swing.JMenuItem();
         mnuConsultas = new javax.swing.JMenu();
@@ -74,7 +75,7 @@ public class MdiSeguridad extends javax.swing.JFrame {
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 388, Short.MAX_VALUE)
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -152,6 +153,14 @@ public class MdiSeguridad extends javax.swing.JFrame {
         });
         mnuCatalogosMantenimientos.add(mantenimientoTipoUsuarios);
 
+        jMenuItem3.setText("Mantenimiento Clientes");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        mnuCatalogosMantenimientos.add(jMenuItem3);
+
         mnuCatalogos.add(mnuCatalogosMantenimientos);
 
         mnuGeneral.add(mnuCatalogos);
@@ -198,7 +207,10 @@ public class MdiSeguridad extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jDesktopPane1)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -298,6 +310,17 @@ public class MdiSeguridad extends javax.swing.JFrame {
         ventana.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.             height) / 2);
     }//GEN-LAST:event_jMenuItemPerfilUsuarioActionPerformed
 
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+        frmMantenimientoCliente ventana = new frmMantenimientoCliente();
+        jDesktopPane1.add(ventana);
+        Dimension desktopSize = jDesktopPane1.getSize();
+        Dimension FrameSize = ventana.getSize();
+        ventana.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.             height) / 2);
+                                                         
+
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -343,6 +366,7 @@ public class MdiSeguridad extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItemPerfilUsuario;
     private javax.swing.JCheckBoxMenuItem mantenimientoAplicaciones;
